@@ -55,18 +55,8 @@ const userService = {
             
         }
     },
-    getAllUsers : async ()=>{
-        try {
-            users = userRepository.getAllUsers()
-            if(!users){
-                return FormateData({err : "No users found"})
-            }
-            return FormateData({users: users})
-        } catch (error) {
-            
-        }
 
-        
-    }}
+
+}
 
 module.exports = userService
