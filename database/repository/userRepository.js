@@ -33,10 +33,31 @@ const userRepository = {
             const existingUser = await userModel.findById(id)
             .populate('name')
             .populate('email')
+
+            return existingUser
+
         } catch (error) {
             
         }
-    }   
+    },
+    getAllUsers : async () =>{
+        try {
+            const users = await userModel.find()
+
+            return users
+
+        } catch (error) {
+
+        }
+    },
+    updateUser : async () =>{
+
+    },
+
+    deleteUser : async () => {
+        
+    }
+
 }
 
 

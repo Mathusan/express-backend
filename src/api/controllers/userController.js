@@ -22,8 +22,13 @@ const userController = {
             next(err)
         }
     },
-    getUsers :(req,res,next) =>{
-
+    getUsers :async (req,res,next) =>{
+        try {
+            const {data} = await userService.getAllUsers()
+            return res.json(data)
+        } catch (error) {
+            next(error)
+        }
     },
     updateUser :(req,res,next) =>{
 
@@ -32,3 +37,5 @@ const userController = {
 
     },
 }
+
+module.exports = userController
