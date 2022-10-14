@@ -39,25 +39,7 @@ const userRepository = {
         } catch (error) {
             
         }
-    },
-    getAllUsers : async () =>{
-        try {
-            const users = await userModel.find()
-
-            return users
-
-        } catch (error) {
-
-        }
-    },
-    updateUser : async () =>{
-
-    },
-
-    deleteUser : async () => {
-        
     }
-
 }
 
 

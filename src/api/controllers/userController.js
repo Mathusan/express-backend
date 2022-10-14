@@ -21,21 +21,7 @@ const userController = {
         } catch (error) {
             next(err)
         }
-    },
-    getUsers :async (req,res,next) =>{
-        try {
-            const {data} = await userService.getAllUsers()
-            return res.json(data)
-        } catch (error) {
-            next(error)
-        }
-    },
-    updateUser :(req,res,next) =>{
-
-    },
-    deleteUser :(req,res,next) =>{
-
-    },
+    }
 }
 
 module.exports = userController

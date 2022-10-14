@@ -54,9 +54,7 @@ const userService = {
         } catch (error) {
             
         }
-    },
-
-
+    }
 }
 
 module.exports = userService
